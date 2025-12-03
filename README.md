@@ -50,7 +50,7 @@ A modern movie search and discovery web application built with Next.js, TypeScri
 ## 📋 Prerequisites
 
 - Node.js 18+ and npm/pnpm/yarn
-- TMDB API key ([Get one here](https://www.themoviedb.org/settings/api))
+- TMDB Access Token ([Get one here](https://www.themoviedb.org/settings/api))
 
 ## 🚀 Getting Started
 
@@ -158,7 +158,6 @@ This app uses the TMDB (The Movie Database) API v3 with Bearer token authenticat
 - `/search/movie` - Search movies
 - `/movie/{id}` - Get movie details
 - `/movie/{id}/credits` - Get movie credits
-- `/genre/movie/list` - Get genres list
 
 ### Person Endpoints
 - `/person/{id}` - Get person details
@@ -249,5 +248,5 @@ The application supports both light and dark themes:
 
 ---
 
-**Note**: Make sure to never commit your `.env.local` file with your actual access token. The `.env.local.example` file is provided as a template.
+**Note**: Make sure to never commit your `.env.local` file with your actual access token.
 
