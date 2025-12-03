@@ -1,3 +1,6 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
 import { TmdbMovie } from '@/types/tmdb';
 import MovieCard from './MovieCard';
 import Skeleton from '@/components/ui/Skeleton';
@@ -13,6 +16,8 @@ export default function MovieGrid({
   isLoading = false,
   skeletonCount = 12,
 }: MovieGridProps) {
+  const t = useTranslations();
+  
   if (isLoading) {
     return (
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 items-stretch">
@@ -30,7 +35,7 @@ export default function MovieGrid({
   if (movies.length === 0 && !isLoading) {
     return (
       <div className="py-12 text-center">
-        <p className="text-lg text-slate-600 dark:text-slate-400">No movies found.</p>
+        <p className="text-lg text-slate-600 dark:text-slate-400">{t('common.noMoviesFound')}</p>
       </div>
     );
   }

@@ -76,16 +76,16 @@ export default function CastList({
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center text-xs text-slate-500 dark:text-slate-500">
-                    No Photo
+                    {t('common.noPhoto')}
                   </div>
                 )}
               </div>
               <div className="mt-2 w-24">
                 <p
                   className="truncate text-sm font-medium text-slate-900 dark:text-white"
-                  title={member.name || 'Unknown'}
+                  title={member.name || t('common.unknown')}
                 >
-                  {member.name || 'Unknown'}
+                  {member.name || t('common.unknown')}
                 </p>
                 {member.character && (
                   <p

@@ -10,10 +10,8 @@ export default function PageLoader() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    // Show loader on route change
     setLoading(true);
     
-    // Hide loader after a short delay
     const timer = setTimeout(() => {
       setLoading(false);
     }, 200);

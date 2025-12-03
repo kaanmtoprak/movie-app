@@ -12,7 +12,6 @@ export const store = configureStore({
     getDefaultMiddleware().concat(moviesApi.middleware),
 });
 
-// Enable refetchOnFocus and refetchOnReconnect behaviors
 setupListeners(store.dispatch);
 
 export type RootState = ReturnType<typeof store.getState>;

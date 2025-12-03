@@ -19,12 +19,11 @@ export default function MovieDetailsHeader({ movie }: MovieDetailsHeaderProps) {
 
   return (
     <div className="relative mb-8 w-full overflow-hidden">
-      {/* Backdrop with gradient overlay - Full width */}
       {backdropUrl && (
         <div className="relative h-[250px] w-full sm:h-[400px] md:h-[500px] lg:h-[600px]">
           <Image
             src={backdropUrl}
-            alt={movie.title || 'Movie backdrop'}
+            alt={movie.title || t('common.movieBackdrop')}
             fill
             className="object-cover"
             priority
@@ -34,18 +33,16 @@ export default function MovieDetailsHeader({ movie }: MovieDetailsHeaderProps) {
         </div>
       )}
 
-      {/* Content overlay */}
       <div
         className={`container-custom ${backdropUrl ? 'relative -mt-[150px] sm:-mt-[200px] md:-mt-[250px] lg:-mt-[300px]' : 'relative mt-0'}`}
       >
         <div className="flex flex-col gap-4 sm:gap-6 md:flex-row">
-          {/* Poster */}
           <div className="flex-shrink-0 flex justify-center sm:justify-start">
             {posterUrl ? (
               <div className="relative h-[225px] w-[150px] overflow-hidden rounded-lg shadow-2xl sm:h-[300px] sm:w-[200px] md:h-[400px] md:w-[267px]">
                 <Image
                   src={posterUrl}
-                  alt={movie.title || movie.original_title || 'Movie poster'}
+                  alt={movie.title || movie.original_title || t('common.moviePoster')}
                   fill
                   className="object-cover"
                   priority
@@ -54,16 +51,15 @@ export default function MovieDetailsHeader({ movie }: MovieDetailsHeaderProps) {
               </div>
             ) : (
               <div className="flex h-[225px] w-[150px] items-center justify-center rounded-lg bg-slate-200 text-slate-500 dark:bg-slate-800 dark:text-slate-400 sm:h-[300px] sm:w-[200px] md:h-[400px] md:w-[267px]">
-                No Image
+                {t('common.noImage')}
               </div>
             )}
           </div>
 
-          {/* Movie Info */}
           <div className="flex-1 space-y-3 pb-4 sm:space-y-4 sm:pb-8 min-w-0">
             <div>
               <h1 className="mb-2 text-2xl font-bold text-slate-900 break-words sm:text-3xl md:text-4xl lg:text-5xl dark:text-white">
-                {movie.title || movie.original_title || 'Untitled'}
+                {movie.title || movie.original_title || t('common.untitled')}
               </h1>
               {movie.tagline && movie.tagline.trim() && (
                 <p className="text-base italic text-slate-700 break-words sm:text-lg dark:text-slate-300">

@@ -9,7 +9,15 @@
     "previous": "Önceki",
     "next": "Sonraki",
     "page": "Sayfa",
-    "of": "/"
+    "of": "/",
+    "noImage": "Görsel Yok",
+    "noPhoto": "Fotoğraf Yok",
+    "untitled": "İsimsiz",
+    "movieBackdrop": "Film arka planı",
+    "moviePoster": "Film afişi",
+    "unknown": "Bilinmiyor",
+    "noMoviesFound": "Film bulunamadı.",
+    "goToPage": "Sayfaya git"
   },
   "header": {
     "title": "Film Keşfet",

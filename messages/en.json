@@ -9,7 +9,15 @@
     "previous": "Previous",
     "next": "Next",
     "page": "Page",
-    "of": "of"
+    "of": "of",
+    "noImage": "No Image",
+    "noPhoto": "No Photo",
+    "untitled": "Untitled",
+    "movieBackdrop": "Movie backdrop",
+    "moviePoster": "Movie poster",
+    "unknown": "Unknown",
+    "noMoviesFound": "No movies found.",
+    "goToPage": "Go to page"
   },
   "header": {
     "title": "Movie Explorer",

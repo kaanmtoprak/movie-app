@@ -17,26 +17,22 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    // Get theme from localStorage or default to dark
     const storedTheme = localStorage.getItem('movie-app-theme') as Theme;
     if (storedTheme && (storedTheme === 'light' || storedTheme === 'dark')) {
       setTheme(storedTheme);
     } else {
-      // Check system preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       setTheme(prefersDark ? 'dark' : 'light');
     }
   }, []);
 
   useEffect(() => {
-    // Apply theme to document
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
 
-    // Save to localStorage (only after mount to avoid hydration issues)
     if (mounted) {
       localStorage.setItem('movie-app-theme', theme);
     }
@@ -46,7 +42,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
-  // Always provide context, even before mount
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}

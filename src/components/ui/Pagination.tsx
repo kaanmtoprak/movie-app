@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 interface PaginationProps {
   currentPage: number;
@@ -15,6 +16,7 @@ export default function Pagination({
   onPageChange,
   baseUrl,
 }: PaginationProps) {
+  const t = useTranslations();
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -77,9 +79,9 @@ export default function Pagination({
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className="rounded-lg bg-slate-200 px-4 py-2 text-slate-800 transition-colors hover:bg-slate-300 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
-        aria-label="Previous page"
+        aria-label={t('common.previous')}
       >
-        Previous
+        {t('common.previous')}
       </button>
 
       <div className="flex gap-1">
@@ -107,7 +109,7 @@ export default function Pagination({
                   ? 'bg-primary-600 text-white'
                   : 'bg-slate-200 text-slate-800 hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700'
               }`}
-              aria-label={`Go to page ${pageNum}`}
+              aria-label={`${t('common.goToPage')} ${pageNum}`}
               aria-current={isActive ? 'page' : undefined}
             >
               {pageNum}
@@ -120,9 +122,9 @@ export default function Pagination({
         onClick={() => handlePageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className="rounded-lg bg-slate-200 px-4 py-2 text-slate-800 transition-colors hover:bg-slate-300 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
-        aria-label="Next page"
+        aria-label={t('common.next')}
       >
-        Next
+        {t('common.next')}
       </button>
     </div>
   );

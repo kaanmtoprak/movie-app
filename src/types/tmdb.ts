@@ -1,5 +1,3 @@
-// TMDB API Response Types
-
 export interface TmdbMovie {
   id: number;
   title: string;
@@ -89,7 +87,7 @@ export interface TmdbPerson {
   profile_path: string | null;
   known_for_department: string;
   popularity: number;
-  gender: number; // 0: not set, 1: female, 2: male, 3: non-binary
+  gender: number;
   imdb_id: string | null;
   homepage: string | null;
 }

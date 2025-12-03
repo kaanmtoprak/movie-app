@@ -3,8 +3,8 @@
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   cursor: grab;
   user-select: none;
   -webkit-user-select: none;
@@ -14,10 +14,9 @@
   scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
   }
 
-  /* Ensure children don't shrink */
   > * {
     flex-shrink: 0;
   }

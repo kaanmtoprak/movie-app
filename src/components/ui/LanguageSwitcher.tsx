@@ -32,10 +32,8 @@ export default function LanguageSwitcher() {
       return;
     }
 
-    // Save to localStorage and cookie
     setStoredLocale(newLocale);
 
-    // Reload page to apply new locale
     window.location.reload();
   };
 

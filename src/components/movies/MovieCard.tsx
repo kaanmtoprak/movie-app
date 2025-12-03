@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { TmdbMovie } from '@/types/tmdb';
 import { getPosterUrl } from '@/lib/tmdbImage';
 import { formatYear } from '@/lib/formatters';
@@ -14,6 +14,7 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie }: MovieCardProps) {
+  const t = useTranslations();
   const posterUrl = getPosterUrl(movie.poster_path);
   const releaseYear = formatYear(movie.release_date);
 
@@ -31,7 +32,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
           />
         ) : (
           <div className={styles.posterPlaceholder}>
-            <span>No Image</span>
+            <span>{t('common.noImage')}</span>
           </div>
         )}
         <div className={styles.content}>
