@@ -15,7 +15,6 @@ export default function RatingBadge({
     lg: 'text-base px-4 py-2',
   };
 
-  // Determine color based on rating
   const getRatingColor = (rating: number) => {
     if (rating >= 8) return 'bg-green-600 text-white';
     if (rating >= 6) return 'bg-yellow-600 text-white';

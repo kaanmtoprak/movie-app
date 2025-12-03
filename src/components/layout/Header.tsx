@@ -47,7 +47,6 @@ export default function Header() {
             </h1>
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden items-center gap-2 lg:flex">
             {navLinks.map((link) => (
               <Link
@@ -68,7 +67,6 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Mobile Menu Button */}
           <div className="flex items-center gap-2 lg:hidden">
             <button
               onClick={toggleMenu}
@@ -101,7 +99,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <nav className="border-t border-slate-200 py-4 dark:border-slate-800 lg:hidden overflow-visible relative">
             <div className="flex flex-col gap-2">
@@ -119,7 +116,6 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              {/* Mobile Theme & Language Switchers */}
               <div className="mt-2 flex items-center gap-2 border-t border-slate-200 pt-2 dark:border-slate-800 relative">
                 <ThemeSwitcher />
                 <div className="relative z-[100]">

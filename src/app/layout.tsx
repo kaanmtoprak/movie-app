@@ -18,12 +18,10 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // Get locale from cookie directly (no middleware)
   const cookieStore = await cookies();
   const localeCookie = cookieStore.get('NEXT_LOCALE')?.value;
   const locale = (localeCookie === 'tr' || localeCookie === 'en') ? localeCookie : 'en';
   
-  // Get messages for the locale
   const messages = await getMessages({ locale });
 
   return (

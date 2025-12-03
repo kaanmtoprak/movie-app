@@ -30,15 +30,11 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-/**
- * RTK Query API for TMDB endpoints
- */
 export const moviesApi = createApi({
   reducerPath: 'moviesApi',
   baseQuery,
   tagTypes: ['Movie', 'MovieDetails', 'Credits'],
   endpoints: (builder) => ({
-    // Get popular movies
     getPopularMovies: builder.query<
       TmdbPaginatedResponse<TmdbMovie>,
       { page?: number; locale?: Locale }
@@ -53,7 +49,6 @@ export const moviesApi = createApi({
       providesTags: ['Movie'],
     }),
 
-    // Get trending movies
     getTrendingMovies: builder.query<
       TmdbPaginatedResponse<TmdbMovie>,
       { page?: number; locale?: Locale }
@@ -68,7 +63,6 @@ export const moviesApi = createApi({
       providesTags: ['Movie'],
     }),
 
-    // Get now playing movies
     getNowPlayingMovies: builder.query<
       TmdbPaginatedResponse<TmdbMovie>,
       { page?: number; locale?: Locale }
@@ -83,7 +77,6 @@ export const moviesApi = createApi({
       providesTags: ['Movie'],
     }),
 
-    // Get top rated movies
     getTopRatedMovies: builder.query<
       TmdbPaginatedResponse<TmdbMovie>,
       { page?: number; locale?: Locale }
@@ -98,7 +91,6 @@ export const moviesApi = createApi({
       providesTags: ['Movie'],
     }),
 
-    // Get upcoming movies
     getUpcomingMovies: builder.query<
       TmdbPaginatedResponse<TmdbMovie>,
       { page?: number; locale?: Locale }
@@ -113,7 +105,6 @@ export const moviesApi = createApi({
       providesTags: ['Movie'],
     }),
 
-    // Search movies
     searchMovies: builder.query<
       TmdbPaginatedResponse<TmdbMovie>,
       { query: string; page?: number; locale?: Locale }
@@ -130,7 +121,6 @@ export const moviesApi = createApi({
       providesTags: ['Movie'],
     }),
 
-    // Get movie details
     getMovieDetails: builder.query<TmdbMovieDetails, { movieId: number; locale?: Locale }>({
       query: ({ movieId, locale = 'en' }) => ({
         url: `/movie/${movieId}`,
@@ -141,7 +131,6 @@ export const moviesApi = createApi({
       providesTags: (result, error, { movieId }) => [{ type: 'MovieDetails', id: movieId }],
     }),
 
-    // Get movie credits
     getMovieCredits: builder.query<TmdbCredits, { movieId: number; locale?: Locale }>({
       query: ({ movieId, locale = 'en' }) => ({
         url: `/movie/${movieId}/credits`,
@@ -152,7 +141,6 @@ export const moviesApi = createApi({
       providesTags: (result, error, { movieId }) => [{ type: 'Credits', id: movieId }],
     }),
 
-    // Get genres list
     getGenres: builder.query<{ genres: TmdbGenre[] }, { locale?: Locale }>({
       query: ({ locale = 'en' }) => ({
         url: '/genre/movie/list',
@@ -162,7 +150,6 @@ export const moviesApi = createApi({
       }),
     }),
 
-    // Get person details
     getPersonDetails: builder.query<TmdbPerson, { personId: number; locale?: Locale }>({
       query: ({ personId, locale = 'en' }) => ({
         url: `/person/${personId}`,
@@ -173,7 +160,6 @@ export const moviesApi = createApi({
       providesTags: (result, error, { personId }) => [{ type: 'MovieDetails', id: `person-${personId}` }],
     }),
 
-    // Get person movie credits
     getPersonMovieCredits: builder.query<TmdbPersonCredits, { personId: number; locale?: Locale }>({
       query: ({ personId, locale = 'en' }) => ({
         url: `/person/${personId}/movie_credits`,

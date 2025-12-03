@@ -25,7 +25,6 @@ export default function MovieSection({
   showViewMore = true,
 }: MovieSectionProps) {
   const t = useTranslations();
-  // Show only first 5 movies on home page
   const displayMovies = movies.slice(0, 5);
 
   return (

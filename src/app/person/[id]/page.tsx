@@ -74,7 +74,6 @@ export default function PersonDetailPage({ params }: PersonDetailPageProps) {
 
   const profileUrl = getProfileUrl(person.profile_path, 'w500');
   
-  // Convert person movie credits to TmdbMovie format for MovieGrid
   const castMovies: TmdbMovie[] = (credits?.cast || []).map((movie) => ({
     id: movie.id,
     title: movie.title,
@@ -98,9 +97,7 @@ export default function PersonDetailPage({ params }: PersonDetailPageProps) {
 
   return (
     <div className="container-custom space-y-8 sm:space-y-12">
-      {/* Person Header */}
       <div className="flex flex-col gap-4 sm:gap-6 sm:flex-row">
-        {/* Profile Image */}
         <div className="flex-shrink-0 flex justify-center sm:justify-start">
           {profileUrl ? (
             <div className="relative h-[300px] w-[200px] overflow-hidden rounded-lg shadow-2xl sm:h-[400px] sm:w-[267px]">
@@ -115,12 +112,11 @@ export default function PersonDetailPage({ params }: PersonDetailPageProps) {
             </div>
           ) : (
             <div className="flex h-[300px] w-[200px] items-center justify-center rounded-lg bg-slate-200 text-slate-500 dark:bg-slate-800 dark:text-slate-400 sm:h-[400px] sm:w-[267px]">
-              No Photo
+              {t('common.noPhoto')}
             </div>
           )}
         </div>
 
-        {/* Person Info */}
         <div className="flex-1 space-y-3 sm:space-y-4 min-w-0">
           <div>
             <h1 className="mb-2 text-2xl font-bold text-slate-900 break-words sm:text-3xl md:text-4xl dark:text-white">
@@ -133,7 +129,6 @@ export default function PersonDetailPage({ params }: PersonDetailPageProps) {
             )}
           </div>
 
-          {/* Personal Information */}
           <div className="space-y-2">
             {person.birthday && (
               <div>
@@ -158,7 +153,6 @@ export default function PersonDetailPage({ params }: PersonDetailPageProps) {
             )}
           </div>
 
-          {/* Biography */}
           {person.biography && (
             <div>
               <h2 className="mb-2 text-lg font-semibold text-slate-900 sm:text-xl dark:text-white">
@@ -172,7 +166,6 @@ export default function PersonDetailPage({ params }: PersonDetailPageProps) {
         </div>
       </div>
 
-      {/* Filmography */}
       {credits && (credits.cast.length > 0 || credits.crew.length > 0) && (
         <div className="space-y-6">
           {credits.cast.length > 0 && (

@@ -1,15 +1,5 @@
-/**
- * TMDB Image URL Helper Functions
- * Base URL: https://image.tmdb.org/t/p/
- */
-
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
 
-/**
- * Get full poster image URL
- * @param posterPath - Poster path from TMDB (e.g., "/abc123.jpg")
- * @param size - Image size (default: "w500")
- */
 export function getPosterUrl(
   posterPath: string | null,
   size: 'w154' | 'w185' | 'w342' | 'w500' | 'w780' | 'original' = 'w500'
@@ -18,11 +8,6 @@ export function getPosterUrl(
   return `${TMDB_IMAGE_BASE_URL}/${size}${posterPath}`;
 }
 
-/**
- * Get full backdrop image URL
- * @param backdropPath - Backdrop path from TMDB
- * @param size - Image size (default: "w780")
- */
 export function getBackdropUrl(
   backdropPath: string | null,
   size: 'w300' | 'w780' | 'w1280' | 'original' = 'w780'
@@ -31,11 +16,6 @@ export function getBackdropUrl(
   return `${TMDB_IMAGE_BASE_URL}/${size}${backdropPath}`;
 }
 
-/**
- * Get full profile image URL
- * @param profilePath - Profile path from TMDB
- * @param size - Image size (default: "w185")
- */
 export function getProfileUrl(
   profilePath: string | null,
   size: 'w45' | 'w185' | 'h632' | 'original' = 'w185'

@@ -12,7 +12,6 @@ export default function ThemeSwitcher() {
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (
-        // Sun icon for light mode
         <svg
           className="h-5 w-5"
           fill="none"
@@ -27,7 +26,6 @@ export default function ThemeSwitcher() {
           />
         </svg>
       ) : (
-        // Moon icon for dark mode
         <svg
           className="h-5 w-5"
           fill="none"
