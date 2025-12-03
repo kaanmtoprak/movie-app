@@ -1,0 +1,83 @@
+{
+  "common": {
+    "home": "Home",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "noResults": "No results found",
+    "tryAgain": "Try again later",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of"
+  },
+  "header": {
+    "title": "Movie Explorer",
+    "searchPlaceholder": "Search movies...",
+    "home": "Home",
+    "search": "Search",
+    "trending": "Trending",
+    "popular": "Popular",
+    "nowPlaying": "Now Playing",
+    "topRated": "Top Rated",
+    "upcoming": "Upcoming"
+  },
+  "home": {
+    "trending": "Trending This Week",
+    "popular": "Popular Movies",
+    "nowPlaying": "Now Playing",
+    "topRated": "Top Rated",
+    "upcoming": "Upcoming Movies",
+    "viewMore": "View More"
+  },
+  "search": {
+    "title": "Search Movies",
+    "placeholder": "Enter a movie title to start searching...",
+    "results": "Found {formattedCount} {count, plural, one {result} other {results}}",
+    "for": "for"
+  },
+  "movie": {
+    "overview": "Overview",
+    "cast": "Cast",
+    "information": "Movie Information",
+    "releaseDate": "Release Date",
+    "status": "Status",
+    "originalLanguage": "Original Language",
+    "budget": "Budget",
+    "revenue": "Revenue",
+    "productionCompanies": "Production Companies",
+    "productionCountries": "Production Countries",
+    "noCast": "No cast information available.",
+    "notFound": "Movie not found.",
+    "invalidId": "Invalid movie ID.",
+    "failedToLoad": "Failed to load movie details. Please try again later."
+  },
+  "person": {
+    "biography": "Biography",
+    "personalInfo": "Personal Information",
+    "birthday": "Birthday",
+    "placeOfBirth": "Place of Birth",
+    "knownFor": "Known For",
+    "filmography": "Filmography",
+    "asActor": "As Actor",
+    "asCrew": "As Crew",
+    "noBiography": "No biography available.",
+    "notFound": "Person not found.",
+    "invalidId": "Invalid person ID.",
+    "failedToLoad": "Failed to load person details. Please try again later.",
+    "noMovies": "No movies found."
+  },
+  "footer": {
+    "poweredBy": "Powered by",
+    "copyright": "© {year} Movie Explorer"
+  },
+  "errors": {
+    "failedToLoadTrending": "Failed to load trending movies. Please try again later.",
+    "failedToLoadPopular": "Failed to load popular movies. Please try again later.",
+    "failedToLoadNowPlaying": "Failed to load now playing movies. Please try again later.",
+    "failedToLoadTopRated": "Failed to load top rated movies. Please try again later.",
+    "failedToLoadUpcoming": "Failed to load upcoming movies. Please try again later.",
+    "failedToSearch": "Failed to search movies. Please try again later."
+  }
+}
+

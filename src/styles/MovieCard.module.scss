@@ -1,0 +1,40 @@
+.card {
+  @apply relative flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 dark:bg-slate-800;
+  height: 100%;
+  
+  &:hover {
+    @apply transform scale-105 shadow-2xl;
+    
+    .poster {
+      @apply opacity-90;
+    }
+  }
+}
+
+.poster {
+  @apply w-full object-cover transition-opacity duration-300;
+  aspect-ratio: 2 / 3;
+}
+
+.posterPlaceholder {
+  @apply flex items-center justify-center bg-slate-200 text-slate-500 dark:bg-slate-700 dark:text-slate-400;
+  aspect-ratio: 2 / 3;
+  min-height: 300px;
+}
+
+.content {
+  @apply flex flex-col p-4;
+  flex: 1;
+  min-height: 80px;
+}
+
+.title {
+  @apply mb-2 text-lg font-semibold text-slate-900 line-clamp-2 dark:text-slate-100;
+  min-height: 3.5rem; // 2 satır için minimum yükseklik (line-height * 2)
+}
+
+.meta {
+  @apply flex items-center justify-between text-sm text-slate-600 dark:text-slate-400;
+  min-height: 1.5rem; // Rating badge için sabit yükseklik
+}
+

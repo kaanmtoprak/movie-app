@@ -1,0 +1,83 @@
+{
+  "common": {
+    "home": "Ana Sayfa",
+    "search": "Ara",
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "noResults": "Sonuç bulunamadı",
+    "tryAgain": "Daha sonra tekrar deneyin",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "page": "Sayfa",
+    "of": "/"
+  },
+  "header": {
+    "title": "Film Keşfet",
+    "searchPlaceholder": "Film ara...",
+    "home": "Ana Sayfa",
+    "search": "Ara",
+    "trending": "Trend",
+    "popular": "Popüler",
+    "nowPlaying": "Gösterimde",
+    "topRated": "En İyi",
+    "upcoming": "Yakında"
+  },
+  "home": {
+    "trending": "Bu Hafta Trend Olanlar",
+    "popular": "Popüler Filmler",
+    "nowPlaying": "Şu An Gösterimde",
+    "topRated": "En Yüksek Puanlılar",
+    "upcoming": "Yakında Gelecekler",
+    "viewMore": "Devamını Gör"
+  },
+  "search": {
+    "title": "Film Ara",
+    "placeholder": "Aramaya başlamak için bir film adı girin...",
+    "results": "{formattedCount} sonuç bulundu",
+    "for": "için"
+  },
+  "movie": {
+    "overview": "Özet",
+    "cast": "Oyuncular",
+    "information": "Film Bilgileri",
+    "releaseDate": "Yayın Tarihi",
+    "status": "Durum",
+    "originalLanguage": "Orijinal Dil",
+    "budget": "Bütçe",
+    "revenue": "Gelir",
+    "productionCompanies": "Yapım Şirketleri",
+    "productionCountries": "Yapım Ülkeleri",
+    "noCast": "Oyuncu bilgisi mevcut değil.",
+    "notFound": "Film bulunamadı.",
+    "invalidId": "Geçersiz film ID'si.",
+    "failedToLoad": "Film detayları yüklenemedi. Lütfen daha sonra tekrar deneyin."
+  },
+  "person": {
+    "biography": "Biyografi",
+    "personalInfo": "Kişisel Bilgiler",
+    "birthday": "Doğum Tarihi",
+    "placeOfBirth": "Doğum Yeri",
+    "knownFor": "Bilinen",
+    "filmography": "Filmografisi",
+    "asActor": "Oyuncu Olarak",
+    "asCrew": "Ekip Olarak",
+    "noBiography": "Biyografi mevcut değil.",
+    "notFound": "Kişi bulunamadı.",
+    "invalidId": "Geçersiz kişi ID'si.",
+    "failedToLoad": "Kişi detayları yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+    "noMovies": "Film bulunamadı."
+  },
+  "footer": {
+    "poweredBy": "Destekleyen",
+    "copyright": "© {year} Film Keşfet"
+  },
+  "errors": {
+    "failedToLoadTrending": "Trend olan filmler yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+    "failedToLoadPopular": "Popüler filmler yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+    "failedToLoadNowPlaying": "Şu an gösterimde olan filmler yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+    "failedToLoadTopRated": "En yüksek puanlı filmler yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+    "failedToLoadUpcoming": "Yakında gelecek filmler yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+    "failedToSearch": "Film araması başarısız oldu. Lütfen daha sonra tekrar deneyin."
+  }
+}
+
